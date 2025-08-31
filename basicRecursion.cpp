@@ -4,10 +4,17 @@ using namespace std;
 
 int counter = 0;
 
+// void printi(int n){
+//     if(counter > n) return;
+//     cout<<counter<<endl;
+//     counter++;
+//     printi(n);
+// }
+
 void printi(int n){
-    if(counter > n) return;
+    if(counter>n) return;
     cout<<counter<<endl;
-    counter++;
+    counter = counter+2;
     printi(n);
 }
 
