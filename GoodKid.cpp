@@ -11,13 +11,6 @@ int min(int arr[], int n){
     }
     return mini;
 }
-void printArr(int arr[], int n){
-    for(int i = 0; i < n; i++){
-        cout<<arr[i]<<" ";
-    }
-    cout<<endl;
-}
-
 int main(){
     int t;
     cin >> t;
@@ -32,9 +25,14 @@ int main(){
         for(int j = 0; j<n; j++){
             if(arr[j] == min(arr,n)){
                 arr[j] = arr[j]+1;
+                break;
             }
         }
-        printArr(arr, n);
+        int multi = 1;
+        for(int k = 0; k < n; k++){
+            multi = multi * arr[k];
+        }
+        cout<<multi<<endl;
     }
     return 0;
 }
