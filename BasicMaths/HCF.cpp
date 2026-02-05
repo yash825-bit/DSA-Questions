@@ -2,7 +2,12 @@
 #include <iostream>
 using namespace std;
 
-
+int gcd(int a, int b){
+    vector<int> factors_a;
+    vector<int> factors_b;
+    
+    return 0;
+}
 
 int main(){
     int t;
