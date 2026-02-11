@@ -4,7 +4,7 @@
     {
       "label": "compile and run (CP mode)",
       "type": "shell",
-      "command": "g++ -std=c++17 -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" \"${file}\" && \"${fileDirname}\\${fileBasenameNoExtension}.exe\" < \"${fileDirname}\\input.txt\" > \"${fileDirname}\\output.txt\" 2> \"${fileDirname}\\error.txt\"",
+      "command": "g++ -std=c++17 -o \"${workspaceFolder}\\CP_IO\\main.exe\" \"${file}\" && \"${workspaceFolder}\\CP_IO\\main.exe\" < \"${workspaceFolder}\\CP_IO\\input.txt\" > \"${workspaceFolder}\\CP_IO\\output.txt\" 2> \"${workspaceFolder}\\CP_IO\\error.txt\"",
       "options": {
         "cwd": "${fileDirname}"
       },

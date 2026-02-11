@@ -2,13 +2,10 @@
 #include <iostream>
 using namespace std;
 
-int gcd(int a, int b){
-    vector<int> factors_a;
-    vector<int> factors_b;
+vector<int> perfectRoot(int n){
+    vector<int> ans;
     
-    return 0;
 }
-
 int main(){
     int t;
     cin >> t;
