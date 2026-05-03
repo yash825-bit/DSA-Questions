@@ -1,43 +1,38 @@
 #include<iostream>
 #include<vector>
-using namespace std;
+#include<algorithm>
 
-istream& operator>>(istream& in,  vector<int>& arr)
+void selectionSort(std::vector<int> &arr, int n)
 {
-    for(int& num : arr)
+    for(int i = 0; i < n-1; i++)
     {
-        in >> num;
-    }
-    return in;
-}
-
-ostream& operator<<(ostream& out, const vector<int>& arr)
-{
-    for(const int& num : arr)
-    {
-        out << num << " ";
-    }
-    return out;
-}
-
-vector<int> selectionSort(vector<int> &arr)
-{
-    int i = 0;
-    for(int j = i+1; i < arr.size(); i++)
-    {
-        if(arr[i])
+        int minidx = i;
+        for(int j = i+1; j < n; j++)
+        { 
+            if(arr[j] < arr[minidx])
+            {
+                minidx = j;
+            }
+        }
+        std::swap(arr[i], arr[minidx]);
     }
 }
 int main()
 {
-    int T;
-    cin >> T;
-    for(int i = 0; i < T; i++)
-    {   
-        int n;
-        cin>>n;
-        vector<int> arr(n);
-        cin>>arr;
-        cout<<arr;
+    int n;
+    std::cin>>n;
+
+    std::vector<int> arr(n);
+    for(int i = 0; i < n; i++)
+    {
+        std::cin>>arr[i];
     }
+
+    selectionSort(arr, n);
+
+    for(int x : arr)
+    {
+        std::cout<<x<<" ";
+    }
+    return 0;
 }
